@@ -1,0 +1,10 @@
+GET http://localhost:3000/todos/:todoId/
+
+ {
+ "id": 3,
+ "todo": "Clean the garden",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-12-12"
+ }
