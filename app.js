@@ -282,7 +282,7 @@ app.put("/todos/:todoId/", async (request, response) => {
       updateColumn = "DueDate";
       break;
   }
-  const previousTodoQuery = `SELECT * FROM todo WHERE id = ${todoId};`;
+  const previousTodoQuery = `SELECT * FROM todo WHERE id = '${todoId}';`;
 
   const previousTodo = await db.get(previousTodoQuery);
 
