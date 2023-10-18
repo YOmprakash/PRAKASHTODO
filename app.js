@@ -150,7 +150,7 @@ app.get("/todos/", async (request, response) => {
         response.send("Invalid Todo category");
       }
       break;
-    case hasPriorityProperty(request.query):
+    case hasPriorityProperties(request.query):
       if (priority === "HIGH" || priority === "MEDIUM" || priority === "LOW") {
         getTodosQuery = `
             SELECT
@@ -165,7 +165,7 @@ app.get("/todos/", async (request, response) => {
         response.send("Invalid Todo Priority");
       }
       break;
-    case hasStatusProperty(request.query):
+    case hasStatusProperties(request.query):
       if (status === "TO DO" || status === "IN PROGRESS" || status === "DONE") {
         getTodosQuery = `
                 SELECT
